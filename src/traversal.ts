@@ -1,4 +1,4 @@
-import { Node, Element } from "domhandler";
+import { Node, Element } from "https://raw.githubusercontent.com/DenoBRComunitty/domhandler/master/mod.ts";
 
 export function getChildren(elem: Node | Element): Node[] | null {
     return (elem as { children?: Node[] }).children || null;

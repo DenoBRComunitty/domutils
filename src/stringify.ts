@@ -1,12 +1,13 @@
-import { Node } from "domhandler";
-import { isTag, isCDATA, isText, hasChildren } from "./tagtypes";
-import renderHTML, { DomSerializerOptions } from "dom-serializer";
+import { Node } from "https://raw.githubusercontent.com/DenoBRComunitty/domhandler/master/mod.ts";
+import { isTag, isCDATA, isText, hasChildren } from "./tagtypes.ts";
+import { DomSerializerOptions } from "https://raw.githubusercontent.com/DenoBRComunitty/dom-serializer/master/mod.ts";
+import render from "https://raw.githubusercontent.com/DenoBRComunitty/dom-serializer/master/mod.ts";
 
 export function getOuterHTML(
     node: Node | Node[],
     options?: DomSerializerOptions
 ): string {
-    return renderHTML(node, options);
+    return render(node, options);
 }
 
 export function getInnerHTML(
@@ -14,7 +15,7 @@ export function getInnerHTML(
     options?: DomSerializerOptions
 ): string {
     return hasChildren(node)
-        ? node.children.map((node) => getOuterHTML(node, options)).join("")
+        ? node.children.map((node: any) => getOuterHTML(node, options)).join("")
         : "";
 }
 

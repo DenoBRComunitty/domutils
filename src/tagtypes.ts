@@ -1,5 +1,5 @@
-import { Node, Element, NodeWithChildren, DataNode } from "domhandler";
-import { ElementType, isTag as isTagRaw } from "domelementtype";
+import { Node, Element, NodeWithChildren, DataNode } from "https://raw.githubusercontent.com/DenoBRComunitty/domhandler/master/mod.ts";
+import { ElementType, isTag as isTagRaw } from "https://raw.githubusercontent.com/DenoBRComunitty/domelementtype/master/mod.ts";
 
 export function isTag(node: Node): node is Element {
     return isTagRaw(node);

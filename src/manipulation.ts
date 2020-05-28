@@ -1,4 +1,4 @@
-import { Node, Element } from "domhandler";
+import { Node, Element } from "https://raw.githubusercontent.com/DenoBRComunitty/domhandler/master/mod.ts";
 
 /***
  * Remove an element from the dom
